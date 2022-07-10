@@ -1,0 +1,70 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}About Us|{{setting[0].title}}{% endblock %}
+{% block keywords %}{{setting[0].keywords}}{% endblock %}
+{% block description %}{{setting[0].description}} {% endblock %}
+
+{% block body %}
+
+    <!-- Subintro
+================================================== -->
+    <section id="subintro">
+        <div class="container">
+            <div class="row">
+                <div class="span8">
+                    <ul class="breadcrumb">
+                        <li><a href="/"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                        <li><a href="/">Accueil</a><i class="icon-angle-right"></i></li>
+                        <li class="active">Qui sommes-nous</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <div class="search">
+                        <form class="input-append">
+                            <input class="search-form" id="appendedPrependedInput" type="text" placeholder="Recherche de ..." />
+                            <button class="btn btn-dark" type="submit">Rechercher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="maincontent">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <h1>Qui sommes-nous?</h1>
+                </div>
+            </div>
+            <h5>
+			<p>
+			AtypikHouse est une équipe passionnée d’experts de location en ligne et ayant pour mission : vous faire rêver dans des lieux totalement atypiques, dans des cadres idylliques et définitivement enchanteurs au cœur de nos belles régions françaises et européennes !
+			<br><br>
+			Nous avons à notre actif plusieurs centaines de destinations à travers toute la France et ce chiffre ne cesse de croître de jour en jour.
+			<br>
+			Quand vous réservez sur AtypikHouse, vous vous permetterez de vivre un moment totalement magique et hors du temps. C'est ça la magie de l'insolite, vivre une expérience unique et non simplement une nuit.
+			<br>
+			La force d’AtypikHouse tient en cela ; une réelle passion, une connaissance parfaite du secteur, une équipe à votre écoute et bien évidemment des souvenirs inoubliables avec vos proches.
+			<br><br>
+			Et oui c’est ça l’esprit AtypikHouse. Vous faire rêver dans un hébergement insolite, vous proposer une démarche expérientielle hors des sentiers battus !
+			<br>
+			Il ne s’agit pas juste de trouver un lieu où dormir, il s’agit de trouver un lieu qui sort de l’ordinaire où vivre une expérience inédite et susciter des émotions uniques !
+			<br><br>
+			En plus, un hébergement insolite est un hébergement qui surprend, qui étonne, qui sort de l'ordinaire, qui donne envie de tenter l'aventure.
+			<br>
+			C'est en général un logement que l'on découvre pour la première fois, et qui amène de l'excitation avant même d'y aller.
+			<br><br><br><br><br><br>
+			</p>
+			</h5>
+            
+            <div class="row">
+                <div class="span10">
+
+                 <!--   {{ setting[0].aboutus |raw }} -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

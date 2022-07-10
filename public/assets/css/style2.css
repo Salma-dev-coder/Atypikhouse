@@ -1,0 +1,465 @@
+@charset "utf-8";.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s
+}
+
+
+*,:after,:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+
+a {
+    background-color: transparent
+}
+
+a:active,a:hover {
+    outline: 0
+}
+
+[hidden],template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+.color-slider {
+    background: 0 0;
+    color: #42dbd6
+}
+
+.background-clip {
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box
+}
+
+.transition-inner * {
+    -webkit-transition: all .3s ease!important;
+    -moz-transition: all .3s ease!important;
+    -ms-transition: all .3s ease!important;
+    -o-transition: all .3s ease!important;
+    transition: all .3s ease!important
+}
+
+.transition {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.transition-scheme,.transition-scheme :after,.transition-scheme :before,.transition-scheme :not([data-id]):not(p):not(span) {
+    -webkit-transition: .5s!important;
+    -moz-transition: .5s!important;
+    -ms-transition: .5s!important;
+    -o-transition: .5s!important;
+    transition: .5s!important;
+    -webkit-filter: blur(0);
+    filter: blur(0)
+}
+
+.transition-scheme-blur {
+    -webkit-filter: blur(7px);
+    filter: blur(7px)
+}
+
+.transition-scheme-spacing .transition-scheme-spacing * {
+    letter-spacing: 0!important
+}
+
+
+.opacity06 {
+    opacity: .6
+}
+
+
+.displayflex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+
+.displaynone {
+    display: none
+}
+
+.wrapper {
+    padding: 0 42px
+}
+
+.overflow {
+    overflow: hidden
+}
+
+.sp-container .sp-slider {
+    margin: 0 auto
+}
+
+.result-tooltip-show {
+    opacity: 1;
+    visibility: visible
+}
+
+.no-alpha.colorset .sp-color {
+    right: 10%
+}
+
+.no-alpha.colorset .sp-hue {
+    left: 93.6%!important;
+    margin-right: -8px!important
+}
+
+a.nuzzle {
+    float: right;
+    line-height: 37px;
+    color: #fff;
+    transition: .3;
+    opacity: .7
+}
+
+a.nuzzle:hover {
+    opacity: 1
+}
+
+.time-left {
+    font-size: 12px;
+    text-align: center;
+    display: none
+}
+
+
+.intro {
+    background-color: #fff;
+    min-height: 100%
+}
+
+.intro-show {
+    -webkit-animation: opacity 1s linear,moving .5s ease-in;
+    animation: opacity 1s linear,moving .5s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+.intro-hide {
+    -webkit-animation: unopacity 1s linear,unmoving .5s ease-in;
+    animation: unopacity 1s linear,unmoving .5s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+.intro-show-prew {
+    -webkit-animation: movingPrew .5s linear;
+    animation: movingPrew .5s linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+.intro-hide-prew {
+    -webkit-animation: unmovingPrew .5s linear;
+    animation: unmovingPrew .5s linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+
+.intro .container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    text-align: center
+}
+
+
+.intro .container {
+    width: 90%
+}
+
+.intro-reviews {
+    padding: 10px 0 95px 0
+}
+
+
+.intro .reviews {
+    margin: 95px auto 0 auto
+}
+
+.intro .reviews-zone.transition .reviews-box {
+    transition: .6s
+}
+
+.intro .reviews-box {
+    background-color: #fff;
+    box-shadow: 0 10px 50px rgba(0,0,0,.1);
+    width: 570px;
+    height: 388px;
+    padding: 42px 52px;
+    text-align: left
+}
+
+.intro .reviews-box>p {
+    color: #5e5e5e;
+    font-size: 18px;
+    line-height: 1.5em;
+    max-height: 190px;
+    overflow: hidden;
+    z-index: 98;
+    position: relative;
+    background-color: rgba(255,255,255,.95)
+}
+
+.intro .reviews-box>p:hover {
+    max-height: 300px;
+    overflow: visible;
+    padding-bottom: 20px;
+    color: #404040
+}
+
+.intro .reviews-box>p:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 99;
+    height: 210px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to top,#fff 10%,rgba(255,255,255,0) 35%)
+}
+
+.intro .reviews-box>p:hover:after {
+    display: none
+}
+
+.intro .reviews-box .reviews_author {
+    height: 80px;
+    position: absolute;
+    bottom: 48px;
+    padding: 5px 0 0 110px
+}
+
+.intro .reviews-box .reviews_author div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.intro .reviews-box .reviews_author p {
+    color: #202020;
+    font-size: 24px;
+    margin-bottom: 3px
+}
+
+.intro .reviews-box .reviews_author span {
+    color: #5e5e5e;
+    font-size: 15px
+}
+
+
+.intro-create p {
+    max-width: 750px
+}
+
+.intro-order {
+    background-color: #192c3d;
+    padding: 45px 0 50px 0
+}
+
+.intro-order .container {
+    max-width: 1170px;
+    width: 90%;
+    text-align: left;
+    background: url(/templates/layout/img/order_bg.jpg) right bottom no-repeat
+}
+
+
+
+.intro {
+    padding-bottom: 50px;
+    overflow: hidden;
+    position: relative
+}
+
+
+@media screen and (min-width: 700px) {
+    .reviews,.reviews-zone {
+        max-width:1024px;
+        height: 400px;
+        position: relative
+    }
+
+    .reviews-box {
+        position: absolute
+    }
+
+    .reviews-box.front {
+        top: 0;
+        z-index: 10;
+        left: 50%;
+        margin-left: -285px;
+        width: 570px;
+        height: 388px
+    }
+
+    .reviews-box.back {
+        z-index: 5;
+        transform: scale(.7);
+        opacity: .5
+    }
+
+    .reviews-box.hide {
+        z-index: 4;
+        transform: scale(.5);
+        opacity: 0
+    }
+
+    .reviews-box.left {
+        left: calc(0% - 89px);
+        margin-left: 0
+    }
+
+    .reviews-box.right {
+        left: calc(100% + 89px);
+        margin-left: -570px
+    }
+
+    .reviews-nav {
+        position: absolute;
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        z-index: 15;
+        top: 170px;
+        left: 50%;
+        cursor: pointer;
+        display: block;
+        background: #5a76ff url(/templates/layout/img/slider_arrow.png) center center no-repeat
+    }
+
+    .reviews-nav.previous {
+        margin-left: -308px
+    }
+
+    .reviews-nav.next {
+        margin-left: 259px;
+        transform: rotate(180deg)
+    }
+
+    .reviews-nav:hover {
+        background-color: #405acc
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .intro-order .container {
+        padding-bottom: 180px;
+        background-position: center bottom
+    }
+
+    .intro-order p {
+        width: 100%;
+        max-width: none
+    }
+
+    .copyright {
+        display: none
+    }
+
+    .reviews-box.hide {
+        display: none
+    }
+
+    .reviews-box.left {
+        display: none
+    }
+
+    .reviews-box.front {
+        margin: 0 auto;
+        left: auto;
+        width: 100%
+    }
+
+    .reviews-box.back {
+        transform: scale(1);
+        opacity: 1;
+        margin: 50px auto 0 auto;
+        left: auto;
+        width: 100%
+    }
+
+    .reviews-box {
+        position: relative
+    }
+
+    .reviews,.reviews-zone {
+        height: auto
+    }
+
+    .reviews-nav {
+        display: none
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .intro .reviews {
+        margin-top: 30px
+    }
+
+    .intro .reviews-box {
+        padding: 30px;
+        height: auto
+    }
+
+    .intro .reviews-box>p {
+        font-size: 16px;
+        margin-bottom: 20px
+    }
+
+    .intro .reviews-box>p:after {
+        display: none
+    }
+
+    .intro .reviews-box .reviews_author {
+        position: relative;
+        bottom: auto;
+        height: 50px;
+        padding: 5px 0 0 70px
+    }
+
+    .intro .reviews-box .reviews_author div {
+        width: 50px;
+        height: 50px
+    }
+
+    .intro-create .container {
+        padding: 30px 0
+    }
+
+}

@@ -1,0 +1,17 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}{{setting[0].title}}{% endblock %}
+{% block keywords %}{{setting[0].keywords}}{% endblock %}
+{% block description %}{{setting[0].description}} {% endblock %}
+
+    {% block body %}
+    
+    <style>
+		iframe {
+			width: 100%;
+			height: 500px;
+		}
+	</style>
+<iframe src="https://www.autoeurope.fr/?aff=googlefr&pucode=FR&ca=1453320858&ag=57309253635&ak=kwd-273243312&kw=c&mt=e&ds=S&ad=392999517100&ap=&c=133001&gclid=Cj0KCQjw9YWDBhDyARIsADt6sGbWou_KA-mCcGjZAhzxvx5JcLnPgWXqQWbC8mubsbxqIapb4QYq4iEaAqEwEALw_wcB" name="myFrame"></iframe>
+
+          {% endblock %}  

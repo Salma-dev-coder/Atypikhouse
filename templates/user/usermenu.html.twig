@@ -1,0 +1,18 @@
+<div class="span3">
+    <aside>
+        <div class="widget">
+
+            <h4 class="rheading">User Menu<span></span></h4>
+            <img src="{{ asset('uploads/images/' ~ app.user.image) }}"  style="height: 80px" class="img-circle">
+            {{ app.user.name }} {{ app.user.surname }}
+            <ul class="cat">
+                <li><a href="/user">Profile</a></li>
+                <li><a href="/user/hotel">Habitat</a></li>
+                <li><a href="/user/chambre"> Chambres D'habitats</a></li>
+                <li><a href="/user/comments">les commentaires</a></li>
+                <li><a href="/user/reservations"> Reservation</a></li>
+                <li><a href="/logout">Deconnexion</a></li>
+            </ul>
+        </div>
+    </aside>
+</div>

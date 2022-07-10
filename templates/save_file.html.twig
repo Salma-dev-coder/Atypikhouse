@@ -1,0 +1,53 @@
+
+{# div photo noir #}
+<div class="home-hero bg-black bg-center bg-cover mt-0 flex relative">
+        {# <img src="https://res.cloudinary.com/dfbe6xcrt/image/upload/fl_lossy,f_auto,q_60/w_1600,h_1000,c_fill/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1600%2Ch_1000%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 1600w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1500%2Ch_938%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 1500w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1400%2Ch_875%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 1400w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1300%2Ch_813%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 1300w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1200%2Ch_750%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 1200w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1100%2Ch_688%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 1100w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1000%2Ch_625%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 1000w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_900%2Ch_563%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 900w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_800%2Ch_500%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 800w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_700%2Ch_438%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 700w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_600%2Ch_375%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 600w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_500%2Ch_313%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 500w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_400%2Ch_250%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 400w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_300%2Ch_188%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 300w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_200%2Ch_125%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 200w,https://res.cloudinary.com/dfbe6xcrt/image/upload/w_100%2Ch_63%2Cc_fill%2Cf_auto%2Cq_auto/expose/dev.roomzzz.com/images/3e3a7d34e3_2020-07-27-14-32-02_2000_1351.jpg 100w" data-sizes="auto" class="absolute pin w-full h-full object-fit-cover editable lazyload" alt="" width="1600" height="1000" >
+  #}
+
+    <div class="absolute pin w-full h-full overflow-hidden opacity-70">
+
+    </div>
+    <div class="flex flex-col w-full min-h-screen-for-real relative">
+        <div class="container my-auto p-t-f1 p-b-f1">
+{# afficher hotel #}
+<div class="container">
+        <div class="row">
+            <div class="span12">
+                <!-- Place somewhere in the <body> of your page -->
+                <div id="mainslider" class="flexslider">
+                    <ul class="slides">
+
+                        {% for rs in slider %}
+                            <li data-thumb="{{ asset('uploads/images/' ~ rs.image) }}" style="height: 400px">
+                                <a href="{{ path('hotel_show', {'id': rs.id}) }}">
+                                    <img src="{{ asset('uploads/images/' ~ rs.image) }}"   style="height: 400px; width:940px "  alt="" />
+                                </a>
+                                <div class="flex-caption primary">
+                                    <h2>{{rs.title}}</h2>
+                                    <p>{{rs.description}}</p>
+                                </div>
+                            </li>
+                        {% endfor %}
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{#  #}
+
+            <h1 class="alfa text-center text-white mt-13 mb-4">HABITAT POUR ÊTRE VOUS-MÊME </h1>
+            <div class="row justify-center text-white md:mb-7">
+                <div class="col sm:w-10/12 md:w-8/12 text-center">
+                    <p><strong> Atypik House </strong> est un agence de location de habitations insolites comme les cabanes dans les arbres, les yourtes ou les cabanes   avec services flexibles avec une touche personnelle pour l'aventure, relax, camping. Profitez du confort de la maison dans  le nature pour une nuit, une semaine, un mois ou plus
+
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-center hidden md:flex">
+    <div class="col md:w-10/12 xl:w-full">
+       
+    </div>
+</div>
+{#  #}

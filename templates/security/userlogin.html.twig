@@ -1,0 +1,64 @@
+
+
+{% block head %}
+<link href="{{asset('assets')}}/css/style7.css" rel="stylesheet">
+{% block title %}User Login {% endblock %}
+{% endblock %}
+
+{% block body %}
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		
+	</div>
+	<div class="form-container sign-in-container">
+		<form method="post" action="/login">
+			{% if error %}
+				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+			{% endif %}
+
+			{% if app.user %}
+				<div class="mb-3">
+					You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Deconnexion</a>
+				</div>
+			{% else  %}
+				Not logged in
+			{% endif %}
+			<h1>S'identifier</h1>
+			
+			<span> ou Bien </span>
+			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+			<input type="password" name="password" id="inputPassword" class="form-control" required>
+
+			<input type="hidden" name="_csrf_token"
+				   value="{{ csrf_token('authenticate') }}"
+			>
+			{#
+				Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+				See https://symfony.com/doc/current/security/remember_me.html
+
+				<div class="checkbox mb-3">
+					<label>
+						<input type="checkbox" name="_remember_me">Souviens-toi de moi
+					</label>
+				</div>
+			#}
+			<button type="submit">S'identifier</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1> BienVenue!</h1>
+				<p>Pour rester connecté avec nous, veuillez vous inscripter avec vos informations personnelles</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1> Bonjour, mon ami!</h1>
+				<p>Entrez vos informations personnelles et commencez votre voyage avec nous</p>
+				<a href="{{path('app_register')}}" class="ghost" id="signUp" style='color:white; border:solid 1 px white; border-raduis:25%'>S'inscrire</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

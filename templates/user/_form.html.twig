@@ -1,0 +1,13 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{# {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+{{ form_start(form) }}
+			
+				{{ form_row(form.email) }}	
+				{{ form_row(form.password) }}
+				{{ form_row(form.name) }}
+				{{ form_row(form.surname) }}
+				{{ form_row(form.image) }}
+                <button class="btn">{{ button_label|default('Save') }}</button>

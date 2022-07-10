@@ -1,0 +1,47 @@
+<div id="wrapper">
+    <header>
+        <!-- Navbar
+      ================================================== -->
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="logo" style=>
+                        <a href="/"><img src="{{asset('assets')}}/img/logo.jpg" alt="" /></a>
+                    </div>
+                    <!-- end logo -->
+
+                    <!-- top menu -->
+                    <div class="navigation">
+<nav>
+
+  <a href="">Home</a>
+   <a href="#"> Habitat</a>
+  <a href="#">Location</a>
+ <a href="#">Activités</a>
+<a href="{{path('login_user')}}">Login</a>
+ <a href="/contact">Contacts</a>
+  
+                                {% if app.user %}
+                                    
+                                    <a href="/user"><img src="{{ asset('uploads/images/' ~ app.user.image) }}" style="height: 30px" >
+                                        {{ app.user.name }}  {{ app.user.surname }}</a>
+
+                                   
+
+                                   <a href="/logout">Logout</a>
+                                {% else %}
+                                  
+                                        <a href="/login"><i class="icon-envelope-alt"></i> Login</a>
+                                   
+                                {% endif %}
+                            
+ 
+</nav>
+                    </div>
+                    <!-- end menu -->
+
+                </div>
+            </div>
+        </div>
+    </header>
