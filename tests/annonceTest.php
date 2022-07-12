@@ -1,30 +1,14 @@
 <?php
-use App\Entity\BusinessDepartment;
-use App\Entity\Contact;
-use App\Form\ContactForm;
 use App\Entity\Hotel;
-use App\Form\Hotel1Type;
+use App\Form\HotelType;
 use App\Repository\HotelRepository;
-use Doctrine\ORM\AbstractQuery;
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\Mapping\ClassMetadata;
-use Doctrine\ORM\QueryBuilder;
-use Doctrine\Persistence\ManagerRegistry;
-use Symfony\Bridge\Doctrine\Form\DoctrineOrmExtension;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Symfony\Component\Form\Test\TypeTestCase;
 
-class annonceTest extends KernelTestCase
+class annonceTest extends TypeTestCase
 {
-     public function testBuildForm()
+    public function testInstanceHotel()
     {
-        $kernel = self::bootKernel();
-
-        /**
-         * @var $container ContainerInterface
-         */
-        $container = $kernel->getContainer();
-        $data =  array('id' => '1',
+        $formData =  ['id' => '1',
         'category_id' => '15',
         'title' => 'Monchâteau Etoilé, hébergement insolite',
         'keywords' => 'Monchâteau Etoilé, hébergement insolite',
@@ -42,27 +26,25 @@ class annonceTest extends KernelTestCase
         'created_at' => NULL,
         'updated_at' => NULL,
         'detail' => 'tst',
-        'userid' => '2');
+        'userid' => '2'];
 
-            $hotel = new Hotel();
-            $formFactory = $container->get("form.factory");
-            $form = $formFactory->create(Hotel1Type::class, $hotel);
+        $expected = (new Hotel())
+        ->setUserid($formData['userid'])
+        ->setTitle($formData['title'])
+        ->setKeywords($formData['keywords'])
+        ->setDescription($formData['description'])
+        ->setStar($formData['star'])
+        ->setAddress($formData['address'])
+        ->setCity($formData['city'])
+        ->setCountry($formData['country'])
+        ->setDetail($formData['detail'])
+        ->setStatus($formData['status']);
 
-        $contactToCompare = new Hotel();
-       
-
-        $expected = new Hotel();
-        // ...populate $object properties with the data stored in $formData
-
-        // submit the data to the form directly
-        $form->submit($data);
-
-        // This check ensures there are no transformation failures
-        $this->assertTrue($form->isSynchronized());
-
-        // check that $model was modified as expected when the form was submitted
-        $this->assertEquals($expected, $hotel);
+        $this->assertEquals($expected->getUserId(), $formData['userid']);
+        $this->assertEquals($expected->getTitle(), $formData['title']);
+        $this->assertEquals($expected->getCountry(), $formData['country']);
+        $this->assertEquals($expected->getCity(), $formData['city']);
+        $this->assertEquals($expected->getDetail(), $formData['detail']);
+        $this->assertEquals($expected->getStatus(), $formData['status']);
+        $this->assertEquals($expected->getAddress(), $formData['address']);
     }
-
-    
-}
